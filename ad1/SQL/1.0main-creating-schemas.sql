@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS main.cancer_analysis (
     region_info INTEGER NOT NULL REFERENCES main.dim_region_data(region_id),
     year_info INTEGER NOT NULL REFERENCES main.dim_year(year_id),
     death_cases_count INTEGER NOT NULL,
-    disease_case_count INTEGER NOT NULL,
+    disease_cases_count INTEGER NOT NULL,
     crude_death_rate NUMERIC(5, 2) NOT NULL,
     crude_disease_rate NUMERIC(5, 2) NOT NULL,
     pollution_info INTEGER NOT NULL REFERENCES main.dim_pollution(pollution_id),
