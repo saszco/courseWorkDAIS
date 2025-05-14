@@ -73,3 +73,11 @@ ALTER TABLE main.cancer_analysis
 ADD CONSTRAINT fk_pollution_id
 FOREIGN KEY (pollution_id)
 REFERENCES main.dim_pollution(pollution_id)
+
+DROP TABLE dim_crude_death_rate;
+DROP TABLE dim_crude_disease_rate;
+DROP TABLE dim_death_cases;
+DROP TABLE dim_disease_cases;
+DROP TABLE dim_pollution;
+DROP TABLE dim_region_data;
+DROP TABLE cancer_analysis;
