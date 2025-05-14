@@ -4,9 +4,9 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": -557.5,
-    "zoomLevel": 1,
+    "scrollTop": -64.8681,
+    "scrollLeft": -214.3887,
+    "zoomLevel": 0.91,
     "show": 431,
     "database": 4,
     "databaseName": "",
@@ -147,18 +147,20 @@
           "wQiQuTyLtNlUJrrAuVHT5",
           "qg0KDTLqYecfqrgAQ3AKd",
           "6i7kIcbcxVSY8fNcQCo8D",
-          "928hXaCNKT6GBfEjeT96Y"
+          "928hXaCNKT6GBfEjeT96Y",
+          "dBUdlsYdK-EY78sGe828N",
+          "x7Pvh9SWwSvK-gu7esbP_"
         ],
         "ui": {
-          "x": 50,
-          "y": 282,
+          "x": 361.5385,
+          "y": 249.3077,
           "zIndex": 2,
           "widthName": 92,
           "widthComment": 60,
           "color": ""
         },
         "meta": {
-          "updateAt": 1747213208500,
+          "updateAt": 1747213707313,
           "createAt": 1747213208500
         }
       }
@@ -522,6 +524,46 @@
         "meta": {
           "updateAt": 1747213208500,
           "createAt": 1747213208500
+        }
+      },
+      "dBUdlsYdK-EY78sGe828N": {
+        "id": "dBUdlsYdK-EY78sGe828N",
+        "tableId": "FOVzsy5Cw7_zVhS7fi8_U",
+        "name": "",
+        "comment": "",
+        "dataType": "",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1747213703525,
+          "createAt": 1747213703525
+        }
+      },
+      "x7Pvh9SWwSvK-gu7esbP_": {
+        "id": "x7Pvh9SWwSvK-gu7esbP_",
+        "tableId": "FOVzsy5Cw7_zVhS7fi8_U",
+        "name": "",
+        "comment": "",
+        "dataType": "",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1747213704300,
+          "createAt": 1747213704300
         }
       }
     },
