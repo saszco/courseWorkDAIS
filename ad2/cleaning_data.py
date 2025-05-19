@@ -262,34 +262,34 @@ def count_all_cases(df, column):
 #df.to_csv('cleaned_cancer_disease_and_death_data_2021.csv', index=False)
 
 #---------------------------------------------------
-# filename = "../ad1/csv/pollution_data_2020.csv"
+filename = "../ad1/csv/pollution_data_2020.csv"
 
-# df = pd.read_csv(filename)
+df = pd.read_csv(filename)
 
-# regions_to_remove = ["Автономна Республіка Крим", "Севастополь"]
+regions_to_remove = ["Автономна Республіка Крим", "Севастополь"]
 
-# df = df[~df['Територіальний розріз'].isin(regions_to_remove)]
+df = df[~df['Територіальний розріз'].isin(regions_to_remove)]
 
-# df.rename(columns={"2020": "Кількість"}, inplace=True)
+df.rename(columns={"2020": "Кількість"}, inplace=True)
 
-# missing_data = df[df.isna().any(axis=1)]
+missing_data = df[df.isna().any(axis=1)]
 
 def pollution_print_missed_columns(data):
     for index, row in data.iterrows():
         missing_columns = row.index[row.isna()].tolist()
         print(f"Регіон: {row['Територіальний розріз']}, Відсутні дані: {missing_columns}")
 
-# pollution_print_missed_columns(missing_data)
+pollution_print_missed_columns(missing_data)
 
-# print(df.dtypes)
+print(df.dtypes)
 
-# df.loc[df['Джерело забруднення'] == 'Стаціонарні джерела', 'Кількість'] = df.loc[df['Джерело забруднення'] == 'Стаціонарні джерела', 'Кількість'] * 1000
+df.loc[df['Джерело забруднення'] == 'Стаціонарні джерела', 'Кількість'] = df.loc[df['Джерело забруднення'] == 'Стаціонарні джерела', 'Кількість'] * 1000
 
-# print(df[['Територіальний розріз', 'Джерело забруднення', 'Кількість']])
+print(df[['Територіальний розріз', 'Джерело забруднення', 'Кількість']])
 
-# df["Рік"] = 2020
+df["Рік"] = 2020
 
-# df.to_csv('pollution_data_2020.csv', float_format='%.2f', index=False)
+df.to_csv('cleaned_pollution_data_2020.csv', float_format='%.2f', index=False)
 
 #-------------------
 
