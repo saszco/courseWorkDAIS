@@ -1,7 +1,6 @@
 CREATE TABLE IF NOT EXISTS main.dim_region_data (
     region_id SERIAL PRIMARY KEY,
-    region_name VARCHAR(255) NOT NULL,
-    population_count INTEGER NOT NULL
+    region_name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS main.dim_pollution (
@@ -19,6 +18,7 @@ CREATE TABLE IF NOT EXISTS main.dim_year (
 CREATE TABLE IF NOT EXISTS main.cancer_analysis (
     id SERIAL PRIMARY KEY,
     region_info INTEGER NOT NULL REFERENCES main.dim_region_data(region_id),
+    population_count INTEGER NOT NULL,
     year_info INTEGER NOT NULL REFERENCES main.dim_year(year_id),
     death_cases_count INTEGER NOT NULL,
     disease_cases_count INTEGER NOT NULL,
@@ -27,3 +27,6 @@ CREATE TABLE IF NOT EXISTS main.cancer_analysis (
     pollution_info INTEGER NOT NULL REFERENCES main.dim_pollution(pollution_id),
     pollution_count NUMERIC(5, 2) NOT NULL
 );
+
+ALTER TABLE main.cancer_analysis
+ALTER COLUMN pollution_count TYPE NUMERIC(20, 2);
