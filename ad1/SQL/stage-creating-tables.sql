@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS stage.pollution_data (
     pollutant_type_name VARCHAR(255),
     source_category_name VARCHAR(255),
     periodicity VARCHAR(255),
-    pollution_count INTEGER
+    pollution_count BIGINT,
+    year INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS stage.population (
@@ -14,7 +15,8 @@ CREATE TABLE IF NOT EXISTS stage.population (
     indicator VARCHAR(255),
     region_name VARCHAR(255),
     periodicity VARCHAR(255),
-    population_count INTEGER
+    population_count INTEGER,
+    year INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS stage.cancer_disease_and_death (
@@ -23,5 +25,10 @@ CREATE TABLE IF NOT EXISTS stage.cancer_disease_and_death (
     disease_case_count INTEGER,
     incidence_rate FLOAT,
     death_case_count INTEGER,
-    death_rate FLOAT
+    death_rate FLOAT,
+    year INT
 );
+
+-- DROP TABLE stage.population
+-- DROP TABLE stage.cancer_disease_and_death
+-- DROP TABLE stage.pollution_data
